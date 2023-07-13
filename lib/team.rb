@@ -8,4 +8,12 @@ class Team
     @roster = []
     @player = player
   end
+
+  def player_count
+    # of players in roster
+  end
+
+  def roster
+    roster = [@player]
+  end
 end

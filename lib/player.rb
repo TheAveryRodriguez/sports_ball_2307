@@ -1,8 +1,11 @@
 class Player
+  attr_accessor :name, :monthly_cost, :contract_length, :nickname
+
   def initialize(name, monthly_cost, contract_length)
     @name = name
     @monthly_cost = monthly_cost
     @contract_length = contract_length
+    @nickname = nickname
   end
 
   def first_name
@@ -13,15 +16,11 @@ class Player
     @name.split.last
   end
 
-  def monthly_cost
-    monthly_cost = @monthly_cost
-  end
-
-  def contract_length
-    contract_length = @contract_length
-  end
-
   def total_cost
-    total_cost = @contract_length * @monthly_cost
+    @contract_length * @monthly_cost
+  end
+
+  def set_nickname!(nickname)
+    @nickname = nickname
   end
 end
