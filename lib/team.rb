@@ -2,18 +2,17 @@ require "rspec"
 require "./lib/player"
 
 class Team
-  attr_reader :roster, :player
+  attr_reader :roster
 
-  def initialize(roster, player)
+  def initialize(name, location)
     @roster = []
-    @player = player
   end
 
   def player_count
-    # of players in roster
+    @roster.length
   end
 
-  def roster
-    roster = [@player]
+  def add_player(new_player)
+    @roster << new_player
   end
 end
