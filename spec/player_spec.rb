@@ -14,14 +14,14 @@ RSpec.describe Player do
     expect(player.first_name).to eq("Michael")
   end
 
-  require "pry"
-  binding.pry
-
   it "has a last name" do
     player = Player.new("Michael Palledorous", 1000000, 36)
 
     expect(player.last_name).to eq("Palledorous")
   end
+
+  require "pry"
+  binding.pry
 
   it "has a monthly cost" do
     player = Player.new("Michael Palledorous", 1000000, 36)

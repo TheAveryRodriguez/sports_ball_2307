@@ -6,6 +6,18 @@ class Player
   end
 
   def first_name
-    first_name = name.index(0)
+    words = @name.to_s.split
+    first_word = words.first
+    @name = first_word
+  end
+
+  def last_name
+    words = @name.to_s.strip.split
+    last_word = words.last
+    @name = last_word
+  end
+
+  def monthly_cost
+    monthly_cost = @monthly_cost
   end
 end
