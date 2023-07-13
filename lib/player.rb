@@ -6,18 +6,22 @@ class Player
   end
 
   def first_name
-    words = @name.to_s.split
-    first_word = words.first
-    @name = first_word
+    @name.split.first
   end
 
   def last_name
-    words = @name.to_s.strip.split
-    last_word = words.last
-    @name = last_word
+    @name.split.last
   end
 
   def monthly_cost
     monthly_cost = @monthly_cost
+  end
+
+  def contract_length
+    contract_length = @contract_length
+  end
+
+  def total_cost
+    total_cost = @contract_length * @monthly_cost
   end
 end
